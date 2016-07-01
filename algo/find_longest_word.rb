@@ -1,21 +1,38 @@
 # Complete the method called find_longest_word, which will accept a string as a parameter (usually a sentence), and return another string that will be the longest word in that sentence.
 
-def find_longest_word(sentence)
+class Sentence
+  def initialize(input)
+    @sentence = input
+  end
 
+  def find_longest_word
+    index = 0
+    longest_word = []
+    @sentence.split.each do |word|
+      if word.length > index
+        index = word.length
+        longest_word = word
+      end
+    end
+    puts longest_word
+  end
 end
 
-# Driver code - don't touch anything below this line.
-puts "TESTING find_longest_word..."
-puts
+sentence = Sentence.new("OH my jiminy cricket I think I did it")
+sentence.find_longest_word
 
-result = find_longest_word("What is the longest word in this phrase?")
+# # Driver code - don't touch anything below this line.
+# puts "TESTING find_longest_word..."
+# puts
 
-puts "Your method returned:"
-puts result
-puts
+# result = find_longest_word("What is the longest word in this phrase?")
 
-if result == "longest"
-  puts "PASS!"
-else
-  puts "F"
-end
+# puts "Your method returned:"
+# puts result
+# puts
+
+# if result == "longest"
+#   puts "PASS!"
+# else
+#   puts "F"
+# end
