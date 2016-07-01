@@ -12,7 +12,6 @@ class Person
   end
 end
 
-
 # Driver code - don't touch anything below this line.
 puts "TESTING the Person class..."
 puts
