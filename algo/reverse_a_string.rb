@@ -6,7 +6,7 @@ class String
     @string = input
   end
 
-  def reverse_a_string
+  def reverse_a_string(string)
     split_string = []
     reverse_string = []
     split_string = @string.split(//)

@@ -5,7 +5,7 @@ class Sentence
     @sentence = input
   end
 
-  def find_longest_word
+  def find_longest_word(sentence)
     index = 0
     longest_word = []
     @sentence.split.each do |word|
@@ -21,18 +21,18 @@ end
 sentence = Sentence.new("OH my jiminy cricket I think I did it")
 sentence.find_longest_word
 
-# # Driver code - don't touch anything below this line.
-# puts "TESTING find_longest_word..."
-# puts
+# Driver code - don't touch anything below this line.
+puts "TESTING find_longest_word..."
+puts
 
-# result = find_longest_word("What is the longest word in this phrase?")
+result = find_longest_word("What is the longest word in this phrase?")
 
-# puts "Your method returned:"
-# puts result
-# puts
+puts "Your method returned:"
+puts result
+puts
 
-# if result == "longest"
-#   puts "PASS!"
-# else
-#   puts "F"
-# end
+if result == "longest"
+  puts "PASS!"
+else
+  puts "F"
+end
